@@ -1,0 +1,377 @@
+@font-face {
+    font-family: Head;
+    src: url(/fonts/Parand.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: logo;
+    src: url(/fonts/Ojan.ttf);
+}
+@font-face {
+    font-family: h;
+    src: url(/fonts/Noor.ttf);
+}
+@font-face {
+    font-family: bolt;
+    src: url(/fonts/bolt.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    background-image: url(/img/back.jpg);
+background-position: center center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+    
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: #24252a;
+}
+
+.content {
+    font-family: Head;
+    color: white;
+    margin-top: 10%;
+    margin-right: 100px;
+    text-align: right;
+}
+h1{
+    font-family:h;
+    font-weight:lighter;
+    color: #d98f30;
+    font-size: 90px;
+    text-shadow: 5px 5px 10px blue;
+}
+.content p{
+    margin-top: 10px;
+    font-size: 30px;
+    color:#24252a;
+}
+main{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+}
+.btns{
+    margin-top: 20px;
+    background: #0088a9;
+    cursor: pointer;
+    color:black;
+    padding:12px 20px;
+    float: right;
+    border:0;
+    border-radius:20px;
+    margin-right: 10px;
+    font-family:head;
+    font-size: 24px;
+}
+.btns:hover{
+    background:#d98f30;
+}
+
+
+
+.logo {
+    cursor: pointer;
+    order: 3;
+    margin-left: auto;
+    text-decoration: none;
+    color:#d98f30;
+    font-family: logo;
+    font-size:24px;
+}
+
+
+nav {
+    order: 1;
+}
+
+.nav__links a,
+.cta,
+.overlay__content a {
+    font-family: Head, sans-serif;
+    font-size:18px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+.nav__links {
+    list-style: none;
+    display: flex;
+    font-size: 16px;
+}
+
+.nav__links li {
+    padding: 0px 20px;
+}
+
+.nav__links li:nth-child(1) {
+    padding: 0 20px 0 0;
+}
+
+.nav__links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+    color: #0088a9;
+}
+
+.cta {
+    order: 2;
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.cta:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(36, 35, 35);
+    color: white;
+    text-align: center;
+    font-family: Head;
+    font-size:18px;
+    margin-top: 20px;;
+}
+
+
+.contact-section {
+    padding: 40px 0;
+}
+
+.contact-section h1 {
+    text-align: center;
+}
+
+.border {
+    width: 100px;
+    height: 10px;
+    background: #34495e;
+    margin: 40px auto;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+    padding: 0 10px;
+    overflow: hidden;
+}
+
+.contact-form-text {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 16px 0;
+    border: 0;
+    background: #111;
+    padding: 20px 40px;
+    outline: none;
+    color: #ddd;
+    transition: 0.5s;
+}
+
+.contact-form-text:focus {
+    box-shadow: 0 0 10px 4px #34495e;
+}
+
+textarea.contact-form-text {
+    resize: none;
+    height: 120px;
+}
+
+.contact-form-btn {
+    float: right;
+    border: 0;
+    background: #34495e;
+    color: #fff;
+    padding: 12px 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.contact-form-btn:hover {
+    background: #d98f30;
+}
+
+
+/* Mobile Nav */
+
+.menu {
+    display: none;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: #24252a;
+    overflow-x: hidden;
+    transition: all 0.5s ease 0s;
+}
+
+.overlay--active {
+    width: 100%;
+}
+
+.overlay__content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay a {
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    transition: all 0.3s ease 0s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+    color: #0088a9;
+}
+
+.overlay .close {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: #edf0f1;
+}
+.aboutus{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fff;
+}
+.containerus{
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding-top: 100px;
+}
+.container-section{
+    float: right;
+    width: 55%;
+}
+.image-section{
+    float:left;
+    width: 40%;
+
+}
+.image-section img{
+    width: 100%;
+    height: 50%;
+}
+.container-section .title{
+    text-decoration: uppercase;
+    font-size: 70px;    
+}
+.container-section h3{
+    margin-top: 28px;
+    color: #111;
+    font-size:24px;
+    font-family: head;
+}
+.container-section p{
+    margin-top: 10px;
+    font-size: 20px;
+    font-family:bolt;
+    color: #5d5d5d;
+    line-height: 1.5rem;
+}
+.container-section .social{
+    margin-top: 40px;
+    text-align: center;
+}
+.container-section .social i{
+    color: #d98f30;
+    font-size: 30px;
+    padding: 0px;
+}
+.container-section .social i:hover {
+    color:#0088a9;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Microbe&display=swap');
+
+@media screen and (max-width:768px) {
+    .containerus {
+        width: 80%;
+        display: block;
+        margin: auto;
+        padding-top: 50px;
+    }
+    .container-section {
+        float: none;
+        width: 100%;
+        display: block;
+        margin: auto;
+    }
+    .image-section {
+        float: none;
+        width: 100%;
+        display: block;
+        margin: auto;
+    }
+    .container-section .title {
+        text-align: center;
+        font-size: 30px;
+    }
+    .content p {
+        font-size: 25px;
+        margin-left: 10px;
+    }
+    .content h1 {
+        font-size: 60px;
+    }
+    
+}
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px;
+    }
+
+    .overlay .close {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    .nav__links,
+    .cta {
+        display: none;
+    }
+
+    .menu {
+        display: initial;
+    }
+}
